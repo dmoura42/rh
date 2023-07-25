@@ -1,12 +1,14 @@
 package br.com.alura.rh.model;
 
+import java.math.BigDecimal;
+
 public class Terceirizado {
 
     private DadosPessoais dadosPessoais;
     private String empresa;
 
-    public Terceirizado(DadosPessoais dadosPessoais, String empresa) {
-        this.dadosPessoais = dadosPessoais;
+    public Terceirizado(String nome, String cpf, Cargo cargo, BigDecimal salario) {
+        this.dadosPessoais = new DadosPessoais(nome, cpf, cargo, salario);
         this.empresa = empresa;
     }
 
